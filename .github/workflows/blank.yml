@@ -1,0 +1,26 @@
+#progama adiciona um número a uma lista se um número já estiver na lista ele recusa, e tem a opão de adicionar mais numeros ou não
+lista = list()
+while True:
+        n = float(input('Adicione um número: '))
+
+        if n not in lista:
+                lista.append(n)
+                print('Valor adicionado com sucesso')
+
+        else:
+                print('Numero não adicionado por está repetido! ')
+
+
+        cparada = str(input('Quer parar? S/N  ')).upper().strip()[0]
+
+
+        if cparada in 'Ss':
+                break
+        else:
+             if cparada in 'Nn':
+                     continue
+             else:
+                     print('Digito inválido, Tente novamente!')
+                     break
+lista.sort()
+print(f'O total de números na lista foi: {lista}')
